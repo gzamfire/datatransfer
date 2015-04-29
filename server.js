@@ -1,5 +1,7 @@
 // SETUP
 
+var downloadName = '';
+
 var http = require('http'),
     fs = require('fs');
 
@@ -20,11 +22,17 @@ var server = http.createServer(function (req, res) {
                 res.end(data, 'utf-8');
             });
             break;
+	case '/download':
+	    fs.readFile('./python/datasets/' + downloadName, function(error, data) {
+		res.writeHead(200, { 'Content-Type': 'application/octet-stream' });
+		res.end(data, 'utf-8');
+	    });
+	    break;
     }
 
-}).listen(3030, "127.0.0.1");
+}).listen(8080);
 
-console.log('Server running at http://127.0.0.1:3030/');
+console.log('Server running at http://52.8.27.57/');
 
 // The above lines of code basically set up a local server for us to access.
 
@@ -189,7 +197,9 @@ io.sockets.on('connection', function(socket) {
           if (err) throw err;
           // results is an array consisting of messages collected during execution 
           console.log('results: %j', results);
-          socket.emit("got_file", seeking + ".xml");
+          downloadName = seeking + ".iim";
+	  socket.emit("got_file", seeking + ".iim");
+	  
         });
 
     });

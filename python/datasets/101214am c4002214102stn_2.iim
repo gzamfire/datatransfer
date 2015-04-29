@@ -1,0 +1,33 @@
+VERSION BUILD=8070701 RECORDER=CR
+URL GOTO=http://bioweb/TechOps/MFG/Pages/default.aspx
+TAG POS=1 TYPE=A ATTR=TXT:PRIMR<SP>Process<SP>Entry<SP>Forms
+WAIT SECONDS=2
+TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:loginform ATTR=NAME:name CONTENT=jvedder
+SET !ENCRYPTION NO
+TAG POS=1 TYPE=INPUT:PASSWORD FORM=NAME:loginform ATTR=NAME:password CONTENT=Standrews8
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:loginform ATTR=NAME:Login
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:confirmLogin ATTR=NAME:Confirm
+WAIT SECONDS=2
+TAG POS=1 TYPE=A ATTR=TXT:C06242-14101
+WAIT SECONDS=5
+TAG POS=1 TYPE=A ATTR=TXT:Daily<SP>Samples<SP>-<SP>68
+WAIT SECONDS=3
+FRAME F=2
+TAG POS=1 TYPE=DIV ATTR=TXT:Bioreactor<SP>Lot:<SP>lockInput(document.forms[0].book_name)*
+TAG POS=1 TYPE=SELECT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:product CONTENT=%asb
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=NAME:dt_time CONTENT=10/12/2014<SP>07:30
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:vcd CONTENT=40.45
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:viability CONTENT=93.2
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:ph CONTENT=6.87
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:glucose CONTENT=0.112
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:avg_cell_density CONTENT=41.11
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:hfr CONTENT=100
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:cspr CONTENT=0.11
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:pco2 CONTENT=182.9
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:po2 CONTENT=
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:lactate CONTENT=
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:osmo CONTENT=
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:ecs_density CONTENT=1.89
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:ecs_viability CONTENT=77.5
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:media_lot CONTENT=
+TAG POS=1 TYPE=SPAN ATTR=TXT:Check<SP>Form

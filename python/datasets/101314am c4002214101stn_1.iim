@@ -10,7 +10,7 @@ TAG POS=1 TYPE=INPUT:SUBMIT FORM=NAME:confirmLogin ATTR=NAME:Confirm
 WAIT SECONDS=2
 TAG POS=1 TYPE=A ATTR=TXT:C06242-14101
 WAIT SECONDS=5
-TAG POS=1 TYPE=A ATTR=TXT:Daily<SP>Samples<SP>-<SP>83
+TAG POS=1 TYPE=A ATTR=TXT:Daily<SP>Samples<SP>-<SP>68
 WAIT SECONDS=3
 FRAME F=2
 TAG POS=1 TYPE=DIV ATTR=TXT:Bioreactor<SP>Lot:<SP>lockInput(document.forms[0].book_name)*
@@ -23,7 +23,7 @@ TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Ae
 TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:avg_cell_density CONTENT=42.51
 TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:hfr CONTENT=0.61
 TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:cspr CONTENT=0.10
-TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:pco2 CONTENT=107.2
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:pco2 CONTENT=177.2
 TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:po2 CONTENT=
 TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:lactate CONTENT=
 TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:https://hosting01.discoverant.com:18443/Aegis-PRIMR/PageEntryManager ATTR=ID:osmo CONTENT=
